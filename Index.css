@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     transition: all 0.4s;
-    font-family: "Monaco", monospace;
+    font-family: "Tahoma ", sans-serif;
 }
 body{
     font-family: sans-serif;
@@ -106,6 +106,96 @@ a{
     justify-content: center;
 }
 
+/* Slider Wrapper */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally aligns the content */
+    align-items: center; /* Vertically aligns the content */
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Slides Container */
+.slides-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling for transitions */
+    width: 100%; /* Full width of the container */
+}
+
+/* Slide Items */
+.slide {
+    flex: 0 0 100%; /* Each slide takes up full container width */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+
+/* Image Styling */
+.slide img {
+    max-width: 80%; /* Prevents images from becoming too large */
+    max-height: 80vh; /* Ensures images don’t overflow the viewport */
+    width: auto;      /* Maintain aspect ratio */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Adjusts image to fit within its container */
+}
+
+/* Adjust Arrow Styles */
+.slide-arrow {
+    position: absolute;
+    top: 50%; /* Centers the arrows vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.slide-arrow:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+#slide-arrow-prev {
+    left: 1rem;
+}
+
+#slide-arrow-next {
+    right: 1rem;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .slide-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    #slide-arrow-prev {
+        left: 0.5rem;
+    }
+
+    #slide-arrow-next {
+        right: 0.5rem;
+    }
+
+    .slide img {
+        max-width: 90%; /* Adjust max width for mobile view */
+    }
+}
+
 .whitespace {
     background-color: white;
     text-align: center; /* Center-align text and inline elements */
@@ -113,10 +203,10 @@ a{
 }
 
 .whitespace img {
-    display: block; /* Treat the image as a block element */
-    margin: 0 auto; /* Center the image horizontally */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 200px; /* Optional: Limit logo size */
+    display: block; 
+    margin: 0 auto; 
+    height: auto; 
+    max-width: 200px; 
 }
 
 .whitespace h4 {
@@ -127,6 +217,37 @@ a{
     padding: 0 1rem; /* Add padding for better spacing */
 }
 
+.bottom {
+    width: 100%; /* Full width of the container */
+    height: 30vh; /* Adjust height as needed */
+    background-image: url('BOTTOMBAR.jpg'); /* Replace with your actual image path */
+    background-size: cover; /* Stretch the background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute items evenly (left, center, right) */
+    color: black; /* Ensure text is readable */
+    padding: 0 2rem; /* Add spacing on the left and right */
+    text-align: center;
+}
+
+.bottom h3 {
+    flex: 1; /* Allows each text block to occupy equal space */
+    margin: 0; /* Reset margin */
+}
+
+.bottom h3.left {
+    text-align: left; /* Align text to the left */
+}
+
+.bottom h3.center {
+    text-align: center; /* Align text to the center */
+}
+
+.bottom h3.right {
+    text-align: right; /* Align text to the right */
+}
 
 .footer {
     background-color: rgb(155, 199, 250);
