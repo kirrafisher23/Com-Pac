@@ -1,2 +1,2 @@
 # Com-Pac
-a big joke
+something to show as a prototype
