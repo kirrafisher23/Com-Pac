@@ -143,16 +143,19 @@ a{
 }
 
 .whitespace h3{
-    text-align: center;
     line-height: 32px;   /* within paragraph */
     margin-bottom: 30px; 
 }
 
-.whitespace b{
-    font-weight: bold;
+ul {
+    list-style-type: disc; /* Use default bullet points */
+    margin-left: 2rem; /* Add left margin for indentation */
+    padding-left: 1rem; /* Optional: Add some padding */
 }
-.whitespace a{
-    color: black;
+
+li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+    line-height: 1.6; /* Improve readability */
 }
 
 

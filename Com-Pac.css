@@ -94,22 +94,100 @@ a{
     }
 }
 
-.background {
+.uppertab{
+    background-color: rgb(0, 116, 249);
+    text-align: center;
+    color: white;
+    padding:1.5%
+}
+
+.main{
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 13%;
+}
+
+
+
+/* Slider Wrapper */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally aligns the content */
+    align-items: center; /* Vertically aligns the content */
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Slides Container */
+.slides-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling for transitions */
     width: 100%; /* Full width of the container */
-    height: 100vh; /* Full height of the viewport */
-    background-image: url('POOL.gif'); /* Replace with your actual image path */
-    background-size: cover; /* Stretch the image to cover the container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Slide Items */
+.slide {
+    flex: 0 0 100%; /* Each slide takes up full container width */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+
+/* Image Styling */
+.slide img {
+    max-width: 80%; /* Prevents images from becoming too large */
+    max-height: 80vh; /* Ensures images don’t overflow the viewport */
+    width: auto;      /* Maintain aspect ratio */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Adjusts image to fit within its container */
+}
+
+/* Adjust Arrow Styles */
+.slide-arrow {
+    position: absolute;
+    top: 50%; /* Centers the arrows vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
 }
-.background h1{
+
+button{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 116, 249);
     color: white;
-    text-align: center;
+    border-radius: 10%;
 }
+
+.slide-arrow:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+#slide-arrow-prev {
+    left: 1rem;
+}
+
+#slide-arrow-next {
+    right: 1rem;
+}
+
+
 /* Mobile View Adjustments */
 @media (max-width: 600px) {
     .slide-arrow {
@@ -131,32 +209,6 @@ a{
     }
 }
 
-.whitespace {
-    background-color: white;
-    padding-top: 2%;
-}
-
-.whitespace h2{
-    text-align: center;
-    line-height: 10px;   /* within paragraph */
-    margin-bottom: 30px; 
-}
-
-.whitespace h3{
-    text-align: center;
-    line-height: 32px;   /* within paragraph */
-    margin-bottom: 30px; 
-}
-
-.whitespace b{
-    font-weight: bold;
-}
-.whitespace a{
-    color: black;
-}
-
-
-
 
 .footer {
     background-color: rgb(155, 199, 250);
@@ -174,4 +226,3 @@ a{
 .right{
     margin-right: 0;
 }
-
