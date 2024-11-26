@@ -104,7 +104,7 @@ a{
 .main{
     text-align: center;
     padding-top: 1%;
-    padding-bottom: 13%;
+    padding-bottom: 5%;
 }
 
 
@@ -151,7 +151,7 @@ a{
     position: absolute;
     top: 50%; /* Centers the arrows vertically */
     transform: translateY(-50%); /* Perfect vertical centering */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: black;
     border: none;
     width: 3rem;
     height: 3rem;
@@ -165,14 +165,36 @@ a{
     transition: opacity 0.3s;
 }
 
-button{
-    display: block;
-    align-items: center;
-    justify-content: center;
+.slide-content {
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center; /* Center both image and button horizontally */
+    text-align: center; /* Align text inside the button */
+    width: 100%; /* Ensure full width of the slide */
+    margin: 0 auto; /* Center the content within the slide */
+}
+
+.slide-content img {
+    max-width: 80%; /* Prevent oversized images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.slide-content button {
+    margin-top: 10px; /* Add space between image and button */
+    padding: 10px 20px; /* Better button padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
     background-color: rgb(0, 116, 249);
     color: white;
-    border-radius: 10%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
+
+.slide-content button:hover {
+    background-color: rgb(0, 90, 200); /* Change color on hover */
+}
+
 
 .slide-arrow:hover {
     opacity: 1;
@@ -181,10 +203,12 @@ button{
 
 #slide-arrow-prev {
     left: 1rem;
+    color: white;
 }
 
 #slide-arrow-next {
     right: 1rem;
+    color: white;
 }
 
 
