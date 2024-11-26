@@ -138,13 +138,14 @@ a{
 
 .whitespace h2{
     text-align: center;
-    line-height: 10px;   /* within paragraph */
-    margin-bottom: 30px; 
+    line-height: 2;   /* within paragraph */
+    margin-bottom: 15px; 
 }
 
 .whitespace h4{
     line-height: 32px;   /* within paragraph */
     margin-bottom: 30px; 
+    line-height: 1.5;
 }
 
 ul {
@@ -156,25 +157,5 @@ ul {
 li {
     margin-bottom: 0.5rem; /* Add spacing between list items */
     line-height: 1.6; /* Improve readability */
-}
-
-
-
-
-.footer {
-    background-color: rgb(155, 199, 250);
-    display: flex;
-    justify-content: space-between; /* Ensures left and right alignment */
-    align-items: center; /* Aligns items vertically */
-    width: auto;
-    height: 100px;
-    color: white;
-    
-}
-.left{
-    margin-left: 0;
-}
-.right{
-    margin-right: 0;
 }
 

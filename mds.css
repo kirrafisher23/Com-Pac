@@ -103,23 +103,5 @@ a{
 
 .main{
     text-align: center;
-    padding-bottom: 20%;
-}
-
-.footer {
-    background-color: rgb(155, 199, 250);
-    display: flex;
-    justify-content: space-between; /* Ensures left and right alignment */
-    align-items: center; /* Aligns items vertically */
-    width: auto;
-    height: 100px;
-    color: white;
-    
-}
-.left{
-    margin-left: 0;
-}
-.right{
-    margin-right: 0;
 }
 
