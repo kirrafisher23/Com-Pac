@@ -10,7 +10,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -18,21 +18,29 @@ a{
 /* navbar styling */
 .navbar{
     display: flex;
-    height: 5rem;
+    height: 4rem;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    background-color:  rgb(155, 199, 250);
-   color: white;
+    font-family: sans-serif;
+    background-color: rgb(221, 221, 221);
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
-/* logo style  */
-.logo img{
+
+/* Logo Styling */
+.logo img {
     width: 100px;
     height: 50px;;
     margin-left:1rem;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between the logo and nav links */
+    flex-shrink: 0; 
+}
 .hamburger-menu{
     padding-right: 1.5rem;
     cursor: pointer;
@@ -43,7 +51,7 @@ a{
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color: white;
+   background-color: black;
    cursor: pointer;
 }
 
@@ -52,7 +60,7 @@ a{
     width: 94%;
     top: 6rem;
     left: 18px;
-    
+    background-color:rgb(221, 221, 221);
     font-weight: 600;
 
 }
@@ -62,7 +70,8 @@ a{
     padding: 5px 0;
 }
 .nav-menu a:hover{
-    background-color:  rgb(0, 116, 249);
+    background-color: rgb(0, 187, 187);
+    border-radius: 5px;
 }
 
 .hide{
@@ -86,14 +95,13 @@ a{
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color:  rgb(0, 116, 249);
+        background-color: rgb(0, 187, 187);
         border-radius: 5px;
     }
     .hamburger-menu{
         display: none;
     }
 }
-
 .background {
     width: 100%; /* Full width of the container */
     height: 100vh; /* Full height of the viewport */

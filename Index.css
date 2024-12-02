@@ -10,7 +10,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -18,21 +18,29 @@ a{
 /* navbar styling */
 .navbar{
     display: flex;
-    height: 5rem;
+    height: 4rem;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    background-color:  rgb(155, 199, 250);
-   color: white;
+    font-family: sans-serif;
+    background-color: rgb(221, 221, 221);
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
-/* logo style  */
-.logo img{
+
+/* Logo Styling */
+.logo img {
     width: 100px;
     height: 50px;;
     margin-left:1rem;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between the logo and nav links */
+    flex-shrink: 0; 
+}
 .hamburger-menu{
     padding-right: 1.5rem;
     cursor: pointer;
@@ -43,7 +51,7 @@ a{
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color: white;
+   background-color: black;
    cursor: pointer;
 }
 
@@ -52,6 +60,7 @@ a{
     width: 94%;
     top: 6rem;
     left: 18px;
+    background-color:rgb(221, 221, 221);
     font-weight: 600;
 
 }
@@ -59,12 +68,10 @@ a{
     display: block;
     text-align: center;
     padding: 5px 0;
-    color: white;
 }
-
 .nav-menu a:hover{
-    background-color:  rgb(0, 116, 249);
-    color: white;
+    background-color: rgb(0, 187, 187);
+    border-radius: 5px;
 }
 
 .hide{
@@ -88,14 +95,13 @@ a{
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color:  rgb(0, 116, 249);
+        background-color: rgb(0, 187, 187);
         border-radius: 5px;
     }
     .hamburger-menu{
         display: none;
     }
 }
-
 .background {
     width: 100%; /* Full width of the container */
     height: 100vh; /* Full height of the viewport */
@@ -253,18 +259,61 @@ a{
 }
 
 .footer {
-    background-color: rgb(155, 199, 250);
+    background-color: rgb(221, 221, 221);
     display: flex;
-    justify-content: space-between; /* Ensures left and right alignment */
-    align-items: center; /* Aligns items vertically */
-    width: auto;
-    height: 100px;
-    color: white;
-    
-}
-.left{
-    margin-left: 0;
-}
-.right{
-    margin-right: 0;
-}
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center; /* Vertically align content */
+    padding: 1rem 2rem; /* Padding for consistent spacing */
+    width: 100%;
+    flex-wrap: wrap; /* Allow content to wrap if needed on small screens */
+  }
+  
+  .footer .left {
+    text-align: left; /* Align logo and text to the left */
+    flex: 1; /* Allow it to take up space */
+  }
+  
+  .footer .left img {
+    max-width: 150px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it takes up its own line */
+    margin-bottom: 0.5rem; /* Space below the logo */
+  }
+  
+  .footer .left a {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    margin-right: 0.5rem; /* Spacing between links */
+  }
+  
+  .footer .right {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the far right */
+    align-items: center; /* Vertically align icons */
+    gap: 0.5rem; /* Spacing between icons */
+  }
+  
+  .footer .right img {
+    width: 50px; /* Adjust the size of social media icons */
+    height: 50px;
+    border-radius: 5px; /* Optional rounded corners */
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    .footer {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center align content horizontally */
+      text-align: center; /* Center-align all text */
+    }
+  
+    .footer .left {
+      margin-bottom: 1rem; /* Add spacing below the left section */
+    }
+  
+    .footer .right {
+      justify-content: center; /* Center align the social icons */
+    }
+  }
+  
