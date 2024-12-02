@@ -93,14 +93,18 @@ a{
         display: none;
     }
 }
-.Pumps{
+.playstructures{
     background-color: rgb(0, 116, 249);
     text-align: center;
     color: white;
     padding:2%
 }
 
-.pa{
+h3{
+    text-align: center;
+}
+
+.CFSeries{
     width: 80%;            /* Limits the width to 60% of the screen (adjust as needed) */
     text-align: left;      /* Aligns the text to the left inside the container */
     padding: 10px;         /* Adds padding around the text */
@@ -109,30 +113,46 @@ a{
     padding-bottom: 10%;
 }
 
-.pa h2{
+.CFSeries h2{
     text-align: center;
     color: rgb(0, 116, 249);
 }
 
-.pa h3{
+.CFSeries h3{
     text-align: center;
 }
 
-.pump{
+.CPS{
     text-align: right;
     width: 60%;                          
     line-height: 1.4;
     margin-left: 35%;
     color: black;
+    padding-bottom: 10%;
 }
 
-.pump h2{
+.CPS h2{
     text-align: center;
     color: rgb(0, 116, 249);
 }
 
-.pump h3{
+.CPS h3{
     text-align: center;
 }
 
+.kseries{
+    width: 80%;            /* Limits the width to 60% of the screen (adjust as needed) */
+    text-align: left;      /* Aligns the text to the left inside the container */
+    padding: 10px;         /* Adds padding around the text */
+    line-height: 1.4;
+    color: black;
+}
 
+.kseries h2{
+    text-align: center;
+    color: rgb(0, 116, 249);
+}
+
+.kseries h3{
+    text-align: center;
+}

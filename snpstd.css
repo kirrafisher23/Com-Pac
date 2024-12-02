@@ -93,14 +93,18 @@ a{
         display: none;
     }
 }
-.Pumps{
+.snp{
     background-color: rgb(0, 116, 249);
     text-align: center;
     color: white;
     padding:2%
 }
 
-.pa{
+.h3{
+    text-align: center;
+}
+
+.embeds{
     width: 80%;            /* Limits the width to 60% of the screen (adjust as needed) */
     text-align: left;      /* Aligns the text to the left inside the container */
     padding: 10px;         /* Adds padding around the text */
@@ -109,16 +113,16 @@ a{
     padding-bottom: 10%;
 }
 
-.pa h2{
+.embeds h2{
     text-align: center;
     color: rgb(0, 116, 249);
 }
 
-.pa h3{
+.embeds h3{
     text-align: center;
 }
 
-.pump{
+.sm{
     text-align: right;
     width: 60%;                          
     line-height: 1.4;
@@ -126,13 +130,11 @@ a{
     color: black;
 }
 
-.pump h2{
+.sm h2{
     text-align: center;
     color: rgb(0, 116, 249);
 }
 
-.pump h3{
+.sm h3{
     text-align: center;
 }
-
-

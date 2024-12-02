@@ -93,14 +93,18 @@ a{
         display: none;
     }
 }
-.Pumps{
+.slides{
     background-color: rgb(0, 116, 249);
     text-align: center;
     color: white;
     padding:2%
 }
 
-.pa{
+h3{
+    text-align: center;
+}
+
+.S4Series{
     width: 80%;            /* Limits the width to 60% of the screen (adjust as needed) */
     text-align: left;      /* Aligns the text to the left inside the container */
     padding: 10px;         /* Adds padding around the text */
@@ -109,29 +113,30 @@ a{
     padding-bottom: 10%;
 }
 
-.pa h2{
+.S4Series h2{
     text-align: center;
     color: rgb(0, 116, 249);
 }
 
-.pa h3{
+.S4Series h3{
     text-align: center;
 }
 
-.pump{
+.CS{
     text-align: right;
     width: 60%;                          
     line-height: 1.4;
     margin-left: 35%;
     color: black;
+    padding-bottom: 10%;
 }
 
-.pump h2{
+.CS h2{
     text-align: center;
     color: rgb(0, 116, 249);
 }
 
-.pump h3{
+.CS h3{
     text-align: center;
 }
 

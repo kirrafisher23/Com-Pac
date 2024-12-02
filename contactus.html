@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Com-Pac Filtration|Pool Water Solutions and Aquatic Manufacturer</title>
-    <link rel="stylesheet" href="ac.css">
+    <link rel="stylesheet" href="contactus.css">
 </head>
 <body>
     <header>
@@ -21,27 +21,39 @@
                 <span class="line"></span>
             </div>
             <div class="nav-menu hide">
-                <a a class="active" href="Index.html">Home</a>
+                <a href="Index.html">Home</a>
                 <a href="Com-Pac.html">Com-Pac</a>
                 <a href="CPI.html">CPI</a>
                 <a href="spray.html">Spray 'N Play</a>
-                <a href="contactus.html">Contact Us</a>
+                <a a class="active" href="contactus.html">Contact Us</a>
             </div>
         </nav>
     </header>
-    <script src="ac.js"></script>
-<div class="coupla">
-    <h2>Architectural Cupolas</h2>
+    <script src="contactus.js"></script>
+
+<div class="topbar">
+    <h1>Contact Us</h1>
 </div>
 
-    <div class="main">
-        <h3>Elevate the aesthetics of your water filtration infrastructure with our  architectural cupolas. 
-            These beautifully designed structures not only add a touch of elegance to your facility but also serve a functional 
-            purpose by providing ventilation and enhancing the overall efficiency of your water management system. 
-            Each unit is custom built to your design, using one piece composite  construction, and engineered to withstand required windloads.
-        </h3>
-    </div>
-  
+<div class="formcarry-container">
+    <form action="contactus.php" method="POST" class="formcarry-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="fullName" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message (Please specify your interest)</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="home">
+    <img src="#" style="float:left;"/>
+    <span style="float:right;">2020 West Beaver St <br> Jacksonville, FL 32209</span>
+</div>
 
 </body>
     <script src="./script.js"></script>
