@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+    font-family: "Tahoma ", sans-serif;
+}
+body{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* navbar styling */
+.navbar{
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: rgb(221, 221, 221);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+/* Logo Styling */
+.logo img {
+    width: 100px;
+    height: 50px;;
+    margin-left:1rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between the logo and nav links */
+    flex-shrink: 0; 
+}
+.hamburger-menu{
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger-menu .line{
+   display: block;
+   width:2.5rem;
+   height: 2px;
+   margin-bottom: 10px;
+   background-color: black;
+   cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color:rgb(221, 221, 221);
+    font-weight: 600;
+
+}
+.nav-menu a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+.nav-menu a:hover{
+    background-color: rgb(0, 187, 187);
+    border-radius: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+/* for Desktop view  */
+@media screen and (min-width:600px){
+    .navbar{
+        justify-content: space-around;
+    }
+    .nav-menu{
+        display: block;
+        position: static;
+        width: auto;
+        margin-right:20px;
+        background: none;
+    }
+    .nav-menu a{
+        display: inline-block;
+        padding: 15px 20px;
+    }
+    .nav-menu a:hover{
+        background-color: rgb(0, 187, 187);
+        border-radius: 5px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+}
+.background {
+    width: 100%; /* Full width of the container */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('POOL.gif'); /* Replace with your actual image path */
+    background-size: cover; /* Stretch the image to cover the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally aligns the content */
+    align-items: center; /* Vertically aligns the content */
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Slides Container */
+.slides-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling for transitions */
+    width: 100%; /* Full width of the container */
+}
+
+/* Slide Items */
+.slide {
+    flex: 0 0 100%; /* Each slide takes up full container width */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+
+/* Image Styling */
+.slide img {
+    max-width: 80%; /* Prevents images from becoming too large */
+    max-height: 80vh; /* Ensures images don’t overflow the viewport */
+    width: auto;      /* Maintain aspect ratio */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Adjusts image to fit within its container */
+}
+
+/* Adjust Arrow Styles */
+.slide-arrow {
+    position: absolute;
+    top: 50%; /* Centers the arrows vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.slide-arrow:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+#slide-arrow-prev {
+    left: 1rem;
+}
+
+#slide-arrow-next {
+    right: 1rem;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .slide-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    #slide-arrow-prev {
+        left: 0.5rem;
+    }
+
+    #slide-arrow-next {
+        right: 0.5rem;
+    }
+
+    .slide img {
+        max-width: 90%; /* Adjust max width for mobile view */
+    }
+}
+
+.whitespace {
+    background-color: white;
+    text-align: center; /* Center-align text and inline elements */
+    padding: 2rem; /* Add padding for spacing */
+}
+
+.whitespace img {
+    display: block; 
+    margin: 0 auto; 
+    height: auto; 
+    max-width: 200px; 
+}
+
+.whitespace h4 {
+    color: black; /* Ensure text is readable */
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 1.5; /* Improve readability */
+    margin-top: 1rem;
+    padding: 0 1rem; /* Add padding for better spacing */
+}
+
+.bottom {
+    width: 100%; /* Full width of the container */
+    height: 30vh; /* Adjust height as needed */
+    background-image: url('BOTTOMBAR.jpg'); /* Replace with your actual image path */
+    background-size: cover; /* Stretch the background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute items evenly (left, center, right) */
+    color: white; /* Ensure text is readable */
+    padding: 0 2rem; /* Add spacing on the left and right */
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.bottom h3 {
+    flex: 1; /* Allows each text block to occupy equal space */
+    margin: 0; /* Reset margin */
+}
+
+.bottom h3.left {
+    text-align: left; /* Align text to the left */
+}
+
+.bottom h3.center {
+    text-align: center; /* Align text to the center */
+}
+
+.bottom h3.right {
+    text-align: right; /* Align text to the right */
+}
+
+.footer {
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center; /* Vertically align content */
+    padding: 1rem 2rem; /* Padding for consistent spacing */
+    width: 100%;
+    flex-wrap: wrap; /* Allow content to wrap if needed on small screens */
+  }
+  
+  .footer .left {
+    text-align: left; /* Align logo and text to the left */
+    flex: 1; /* Allow it to take up space */
+  }
+  
+  .footer .left img {
+    max-width: 150px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it takes up its own line */
+    margin-bottom: 0.5rem; /* Space below the logo */
+  }
+  
+  .footer .left a {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    margin-right: 0.5rem; /* Spacing between links */
+  }
+  
+  .footer .right {
+    display: flex;
+    justify-content: flex-end; /* Align icons to the far right */
+    align-items: center; /* Vertically align icons */
+    gap: 0.5rem; /* Spacing between icons */
+  }
+  
+  .footer .right img {
+    width: 50px; /* Adjust the size of social media icons */
+    height: 50px;
+    border-radius: 5px; /* Optional rounded corners */
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    .footer {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center align content horizontally */
+      text-align: center; /* Center-align all text */
+    }
+  
+    .footer .left {
+      margin-bottom: 1rem; /* Add spacing below the left section */
+    }
+  
+    .footer .right {
+      justify-content: center; /* Center align the social icons */
+    }
+  }
+  
