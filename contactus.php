@@ -1,13 +1,11 @@
 <?php
-// Include PHPMailer
+require __DIR__ . '/vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/src/PHPMailer.php';
-require 'path/to/src/SMTP.php';
-require 'path/to/src/Exception.php';
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve form inputs
     $name = $_POST['fullName'] ?? '';
     $email = $_POST['email'] ?? '';
     $message = $_POST['message'] ?? '';
@@ -23,18 +21,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         $mail = new PHPMailer(true);
+
+        // Uncomment for debugging, remove in production
+        // $mail->SMTPDebug = 3;
+        // $mail->Debugoutput = 'html';
+
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Use your SMTP server
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'your-email@gmail.com'; // Replace with your email
-        $mail->Password = 'your-app-password'; // Use an app-specific password if using Gmail
+        $mail->Username = 'kirrafisher23@gmail.com';
+        $mail->Password = 'hbzk ygwx lhdw dcmj'; // Use your actual App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Email details
-        $mail->setFrom($email, $name);
-        $mail->addAddress('your-recipient-email@example.com'); // Replace with recipient email
+        $mail->setFrom('kirrafisher23@gmail.com', $name);
+        $mail->addAddress('kirrafisher23@gmail.com');
         $mail->Subject = 'Contact Form Submission';
         $mail->Body = "Name: $name\nEmail: $email\nMessage:\n$message";
 

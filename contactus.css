@@ -135,7 +135,7 @@ a{
   
   .formcarry-container {
     /* Align to the left */
-    margin: 10vh auto 0 10%; /* Adjust the left margin as needed */
+    margin: auto auto 0 2%; /* Adjust the left margin as needed */
     width: 40%; /* Reduce form width */
     max-width: 400px; /* Ensure it doesn't grow too large */
     display: block;
@@ -182,7 +182,7 @@ a{
     width: 100%;
     padding: 12px 20px;
     border-radius: 8px;
-      border-color: transparent;
+    border-color: transparent;
     background-color: var(--color-blue);
     color: #fff;
     font-weight: 700;
@@ -216,37 +216,38 @@ a{
   .formcarry-alert.error {
     background: red;
   }
-
+  
 /* Layout for the form and contact info */
 .contact-container {
-  display: flex;
-  justify-content: space-between; /* Space between form and contact info */
+  display: flex; /* Flex layout for alignment */
+  justify-content: space-between; /* Separate the form and contact info */
   align-items: flex-start; /* Align items to the top */
-  gap: 2rem; /* Add space between columns */
+  gap: 40%; /* Default gap for larger screens */
   margin: 2rem auto;
-  max-width: 1200px; /* Limit the container width */
-  padding: 0 1rem; /* Add padding on smaller screens */
+  max-width: 1200px; /* Limit container width */
+  padding: 0 1rem; /* Add padding for smaller screens */
 }
 
 .formcarry-container {
-  flex: 1; /* Take up equal space */
+  flex: 1; /* Form takes up equal space */
+  max-width: 600px; /* Limit the form width */
 }
 
 .contact-info {
-  flex: 1; /* Take up equal space */
+  flex: 1; /* Contact info takes up equal space */
   display: flex;
   flex-direction: column; /* Stack contact items vertically */
-  gap: 1.5rem; /* Space between each contact item */
+  gap: 1.5rem; /* Space between contact items */
 }
 
 /* Contact item styling */
 .contact-item {
   display: flex;
-  align-items: center; /* Align image and text vertically */
+  align-items: center; /* Align icon and text vertically */
 }
 
 .contact-item img {
-  width: 50px; /* Fixed size for icons */
+  width: 40px; /* Adjust icon size */
   height: auto; /* Maintain aspect ratio */
   margin-right: 15px; /* Space between icon and text */
 }
@@ -266,30 +267,29 @@ a{
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .contact-container {
     flex-direction: column; /* Stack form and contact info vertically */
-    align-items: center; /* Center-align for smaller screens */
+    align-items: center; /* Center align for smaller screens */
+    gap: 2rem; /* Smaller gap for mobile layout */
   }
 
   .formcarry-container,
   .contact-info {
-    flex: none; /* Remove flex-grow behavior */
-    width: 100%; /* Full width on smaller screens */
+    flex: none; /* Remove equal space distribution */
+    width: 100%; /* Full width for both sections */
   }
 
   .contact-info {
-    align-items: center; /* Center contact items */
+    align-items: flex-start; /* Left-align items */
   }
 
   .contact-item {
-    justify-content: center; /* Center-align items */
-    text-align: center;
+    justify-content: flex-start; /* Left-align content */
+    text-align: left;
   }
 
   .contact-item img {
-    margin-right: 0;
-    margin-bottom: 0.5rem; /* Add space below icons */
+    margin-right: 10px; /* Reduce spacing between icon and text */
   }
 }
-
